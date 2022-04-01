@@ -8,5 +8,5 @@ class Score(Director):
         self.score = 0
         
 #get_word  return the ramdpn word selected
-    def get_word(self):
+    def word(self):
         return random.choice(self.list)

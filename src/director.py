@@ -1,24 +1,28 @@
+
 class Director:
+
     list = ['rock', 'paper', 'scissors']
+    
 # thebresponsibility of Director is to hold a list of word ['rock', 'paper', 'scissors']
 
-    def __init__(self, artificial_player):
-        self.artificial_player = artificial_player
+    def __init__(self, x1):
+        
+        self.artificial_player = x1
         self.guess = ''
         self.score = 0
         
 
 # def set_word set the initial word, to play in the game
 
-    def set_word(self, guess):
+    def set_word(self, y):
 
-        while(guess not in self.list):
+        while(y not in self.list):
            
             print("Choose again : {}".format(self.list))
            
-            guess = input().lower()
+            y = input().lower()   # ESTO ES PARA RESETEAR Y VOLVER A HACER LA PREGUNTA
 
-        self.guess = guess.lower()
+        self.guess = y.lower()
 # def word  return the self.guess value
     def word(self):
         return self.guess
@@ -32,3 +36,7 @@ class Director:
     def point(self):
         
          return(" {}\'s score is: {}".format(self.artificial_player,self.score))
+    
+
+
+  

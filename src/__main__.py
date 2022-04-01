@@ -38,14 +38,34 @@ def check_result(player, artificial):
 artificial = Score()
 player = Director(input('\nWhat is ypour name?: '))
 
-while True:
+
+stay = True
+while stay:
+
+
     print('Make a guess!: (rock, paper, scissors)')
-    player.set_word(input())
+    
+    player.set_word(input().lower())
+
     check_result(player, artificial)
+
     print(f'{player.point()} ')
     print(f'{artificial.point()}')
     print('\n')
+    keep_playing = ""
+    while not keep_playing in ("y", "n"):
     
+        keep_playing = input(f"STAY OR LEAVE [y/n]: ")
+
+    if keep_playing == "n":
+
+    
+        stay = False
+
+
+
+
+
 
     
 
